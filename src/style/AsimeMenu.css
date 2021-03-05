@@ -1,0 +1,56 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  width: 60px;
+  height: 100%;
+  padding: 15px 0;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+aside > .logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+}
+
+aside > nav {
+  display: flex;
+  flex-direction: column;
+}
+aside > nav > .link {
+  width: 100%;
+  padding: 22px;
+  border: none;
+  position: relative;
+}
+aside > nav > .link > img {
+  width: 100%;
+}
+aside > nav > .link:hover,
+aside > nav > .link.active {
+  background-color: #fff4;
+}
+aside > nav > .link.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background-color: #fff;
+}
+
+aside > .profile {
+  width: 40px;
+  height: 40px;
+  margin-top: auto;
+  object-fit: contain;
+  object-position: center;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
