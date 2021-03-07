@@ -1,0 +1,44 @@
+[
+    {
+        "driveName": "Google Drive",
+        "capacity": {
+            "used": 45.5,
+            "total": 50,
+            "units": "GB"
+        },
+        "folders": [
+            {
+                "folderName": "Analytics",
+                "fileCount": 15
+            },
+            {
+                "folderName": "Assets",
+                "fileCount": 345
+            },
+            {
+                "folderName": "Marketing",
+                "fileCount": 143
+            },
+            {
+                "folderName": "Holidays",
+                "fileCount": 7
+            }
+        ]
+    },
+    {
+        "driveName": "Dropbox",
+        "capacity": {
+            "used": 1.2,
+            "total": 3,
+            "units": "GB"
+        }
+    },
+    {
+        "driveName": "OneDrive",
+        "capacity": {
+            "used": 2.5,
+            "total": 3,
+            "units": "GB"
+        }
+    }
+]

@@ -1,0 +1,94 @@
+.drives {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.drives > .drive {
+  display: flex;
+  max-width: 200px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  background-color: #fff;
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #0001;
+}
+.drives > .drive:hover,
+.drives > .drive.active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.drives > .drive > .drive-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  object-position: center;
+  background-color: var(--background-color);
+  border-radius: 8px;
+}
+.drives > .drive:hover > .drive-logo,
+.drives > .drive.active > .drive-logo {
+  background-color: #fff;
+}
+.drive > .actions {
+  width: 20px;
+  height: 20px;
+  line-height: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.drive > .actions:hover,
+.drive > .actions.active {
+  background-color: #eee;
+  color: #555;
+}
+.drive > .name {
+  width: 100%;
+  font-size: 15px;
+}
+.drive > .progress {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-between;
+  width: 100%;
+  color: #777;
+  font-size: 13px;
+  line-height: 15px;
+}
+.drive:hover > .progress,
+.drive.active > .progress {
+  color: #fff;
+}
+.drive > .progress > .bar {
+  display: inline-block;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #ddd;
+  overflow: hidden;
+}
+.drive .bar > .value {
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+  background-color: var(--main-color);
+}
+.drive:hover > .progress > .bar,
+.drive.active > .progress > .bar {
+  background-color: #fff;
+}
+.drive:hover .bar > .value,
+.drive.active .bar > .value {
+  background-color: #f93;
+}

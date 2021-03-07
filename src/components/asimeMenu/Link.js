@@ -1,16 +1,12 @@
-import { useState } from 'react';
-
 function Link(props) {
-    const { data } = props;
-
-    const [active, setActivity] = useState(false);
+    const { data, active, updateMenuSelection } = props;
 
     const updateActivity = () => {
-        setActivity(!active);
+        updateMenuSelection();
     }
 
     return (
-        <div className={"link" + active ? ' active' : ''} key={data.icon} onClick={() => updateActivity()}>
+        <div className={"link" + (active ? ' active' : '')} onClick={updateActivity}>
             <img src={data.img} alt="" />
         </div>
     )

@@ -1,0 +1,25 @@
+.block {
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+.block > .title {
+  font-size: 24px;
+  line-height: 30px;
+}
+.block > .more {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+.block > .more:hover {
+  text-decoration: underline;
+}
+.block > .content {
+  width: 100%;
+}

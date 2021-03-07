@@ -1,10 +1,12 @@
 import AsimeMenu from './components/asimeMenu/AsimeMenu.js';
-import './App.css';
+import { Content } from './components/content/Content.js';
+import './style/App.css';
 
 function App() {
   return (
     <div className="App">
       <AsimeMenu />
+      <Content />
     </div>
   );
 }

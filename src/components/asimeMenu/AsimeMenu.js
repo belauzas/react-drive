@@ -7,6 +7,7 @@ import settings from '../../images/settings.png';
 import userProfile from '../../images/profile-picture.png';
 import '../../style/AsimeMenu.css';
 import Link from './Link.js';
+import { Fragment, useState } from 'react';
 
 function AsimeMenu() {
     const links = [
@@ -15,15 +16,37 @@ function AsimeMenu() {
         { icon: 'users', img: users },
         { icon: 'stats', img: stats },
         { icon: 'settings', img: settings },
-    ]
+    ];
+
+    const [activeMenu, setActiveMenu] = useState(0);
+    const [expanded, setExpanded] = useState(true);
+
+    const expandMenu = (i) => {
+        if (i === activeMenu) {
+            setExpanded(!expanded);
+        } else {
+            setActiveMenu(i);
+            setExpanded(true);
+        }
+    }
+
     return (
-        <aside>
-            <img className="logo" src={logo} alt="Project logo" />
-            <nav>
-                {links.map(link => <Link data={link} />)}
-            </nav>
-            <img className="profile" src={userProfile} alt="Project logo" />
-        </aside>
+        <Fragment>
+            <aside>
+                <img className="logo" src={logo} alt="Project logo" />
+                <nav>
+                    {links.map((link, i) =>
+                        <Link key={i}
+                            data={link}
+                            active={i === activeMenu}
+                            updateMenuSelection={() => expandMenu(i)} />)}
+                </nav>
+                <img className="profile" src={userProfile} alt="Project logo" />
+            </aside>
+            <div className={'menu-content' + (expanded ? ' active' : '')}>
+                MENU CONTENT
+            </div>
+        </Fragment>
     )
 }
 

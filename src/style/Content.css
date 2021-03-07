@@ -1,0 +1,9 @@
+section.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+section.stats {
+  width: 300px;
+  background-color: #fff;
+}

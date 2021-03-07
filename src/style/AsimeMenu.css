@@ -4,8 +4,7 @@ aside {
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
-  width: 60px;
-  height: 100%;
+  min-height: 100vh;
   padding: 15px 0;
   background-color: var(--main-color);
   color: #fff;
@@ -23,8 +22,8 @@ aside > nav {
   flex-direction: column;
 }
 aside > nav > .link {
-  width: 100%;
-  padding: 22px;
+  width: 70px;
+  padding: 20px 26px;
   border: none;
   position: relative;
 }
@@ -53,4 +52,19 @@ aside > .profile {
   object-position: center;
   border: 3px solid #fff;
   border-radius: 50%;
+}
+
+.menu-content {
+  display: none;
+  width: 200px;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  transition: all 0.5s;
+  position: relative;
+  z-index: -1;
+}
+.menu-content.active {
+  display: flex;
+  z-index: 1;
 }
