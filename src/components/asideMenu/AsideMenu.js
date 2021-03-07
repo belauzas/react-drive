@@ -5,11 +5,11 @@ import users from '../../images/users.png';
 import stats from '../../images/stats.png';
 import settings from '../../images/settings.png';
 import userProfile from '../../images/profile-picture.png';
-import '../../style/AsimeMenu.css';
+import '../../style/AsideMenu.css';
 import Link from './Link.js';
 import { Fragment, useState } from 'react';
 
-function AsimeMenu() {
+function AsideMenu() {
     const links = [
         { icon: 'files', img: files },
         { icon: 'chat', img: chat },
@@ -50,4 +50,4 @@ function AsimeMenu() {
     )
 }
 
-export default AsimeMenu;
+export default AsideMenu;

@@ -1,11 +1,11 @@
-import AsimeMenu from './components/asimeMenu/AsimeMenu.js';
+import AsideMenu from './components/asideMenu/AsideMenu.js';
 import { Content } from './components/content/Content.js';
 import './style/App.css';
 
 function App() {
   return (
     <div className="App">
-      <AsimeMenu />
+      <AsideMenu />
       <Content />
     </div>
   );

@@ -21,6 +21,8 @@ function Content() {
     const activeFolders = driveData[activeDrive].folders;
     const folders = activeFolders.length <= maxFoldersToDisplay ? activeFolders : activeFolders.slice(0, maxFoldersToDisplay);
 
+    const recentFilesData = driveData[activeDrive].recentFiles;
+
     return (
         <Fragment>
             <section className="content">
@@ -40,7 +42,7 @@ function Content() {
                     })}
                 </Block>
                 <Block title="Recent files" viewMore="View all" childrenClass="files">
-                    <RecentFiles />
+                    <RecentFiles data={recentFilesData} />
                 </Block>
             </section>
             <section className="stats">

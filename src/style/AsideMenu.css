@@ -23,7 +23,7 @@ aside > nav {
 }
 aside > nav > .link {
   width: 70px;
-  padding: 20px 26px;
+  padding: 20px 27px;
   border: none;
   position: relative;
 }
@@ -61,10 +61,7 @@ aside > .profile {
   border-right: 1px solid #ccc;
   overflow: hidden;
   transition: all 0.5s;
-  position: relative;
-  z-index: -1;
 }
 .menu-content.active {
   display: flex;
-  z-index: 1;
 }
